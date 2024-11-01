@@ -108,7 +108,7 @@ fi
 
 if ! command -v rustup 2>&1 >/dev/null
 then
-	echo
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
 if ! command -v tmux 2>&1 >/dev/null
