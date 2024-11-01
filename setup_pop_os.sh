@@ -11,7 +11,7 @@
 #	- Install fonts
 #
 # To use the script, run the following from the command line:
-# `curl https://github.com/george-greene/scripts/setup_pop_os.sh | sh`
+# curl https://raw.githubusercontent.com/george-greene/scripts/refs/heads/main/setup_pop_os.sh -o setup_pop_os.sh && chmod u+x ./setup_pop_os.sh && ./setup_pop_os.sh
 
 if [ -d ~/Documents ]; then
 	rmdir ~/Documents
