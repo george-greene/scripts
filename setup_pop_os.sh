@@ -119,11 +119,11 @@ fi
 
 if ! command -v tmux 2>&1 >/dev/null
 then
-	echo
+	sudo apt install tmux
 fi
 
 if ! command -v vim 2>&1 >/dev/null
 then
-	echo
+	sudo apt install vim
 fi
 
