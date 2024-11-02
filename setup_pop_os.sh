@@ -112,7 +112,7 @@ fi
 
 if ! command -v ghcup 2>&1 >/dev/null
 then
-	echo
+	curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 fi
 
 if ! command -v go 2>&1 >/dev/null
