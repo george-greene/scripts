@@ -1,15 +1,5 @@
 #!/bin/bash
 
-# This script sets up a fresh installation of Pop!_OS.
-# If any tasks have already been completed, it will skip those tasks.
-# Specifically, it does the following:
-# 	- Remove directories
-# 	- Make directories
-#	- Clone repositories
-#	- Install programs
-#	- Add to PATH
-#	- Install fonts
-
 if [ -d ~/Documents ]; then
 	rmdir ~/Documents
 fi
@@ -89,13 +79,9 @@ fi
 if ! command -v brave-browser-nightly 2>&1 >/dev/null
 then
 	sudo apt install curl
-
 	sudo curl -fsSLo /usr/share/keyrings/brave-browser-nightly-archive-keyring.gpg https://brave-browser-apt-nightly.s3.brave.com/brave-browser-nightly-archive-keyring.gpg
-
 	echo "deb [signed-by=/usr/share/keyrings/brave-browser-nightly-archive-keyring.gpg] https://brave-browser-apt-nightly.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-nightly.list
-
 	sudo apt update
-
 	sudo apt install brave-browser-nightly
 fi
 
